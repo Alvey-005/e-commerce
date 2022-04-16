@@ -6,9 +6,9 @@ const config = {
     authDomain: "crwn-ecomz-db.firebaseapp.com",
     projectId: "crwn-ecomz-db",
     storageBucket: "crwn-ecomz-db.appspot.com",
-    messagingSenderId: "433193189207",
-    appId: "1:433193189207:web:9b8312d7b3f03ee5c78812",
-    measurementId: "G-0C4QEKL79H"
+    messagingSenderId: `${process.env.MESSAGING_SENDER_ID}`,
+    appId: `${process.env.APP_ID}`,
+    measurementId: `${process.env.MEASUREMENT_ID}`
   };
   export const createUserProfileDocument = async (userAuth,additionalData) =>{
     if(!userAuth) return;
